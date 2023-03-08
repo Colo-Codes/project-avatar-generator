@@ -1,39 +1,41 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
-import './App.css';
+import styles from './styles/App.module.css';
 import DropZone from './components/DropZone';
 
 function App() {
-    const [count, setCount] = useState(0);
+    const [message, setMessage] = useState(null);
+    const currentYear = new Date().getFullYear();
 
     return (
-        <div className='App'>
-            <div>
-                <a href='https://vitejs.dev' target='_blank'>
-                    <img src='/vite.svg' className='logo' alt='Vite logo' />
-                </a>
-                <a href='https://reactjs.org' target='_blank'>
-                    <img
-                        src={reactLogo}
-                        className='logo react'
-                        alt='React logo'
-                    />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className='card'>
-                <button onClick={() => setCount(count => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className='read-the-docs'>
-                Click on the Vite and React logos to learn more
-            </p>
-            <DropZone />
-        </div>
+        <>
+            <header>
+                <h1>Avatar Generator</h1>
+            </header>
+            <main>
+                <div
+                    className={`${styles.heroDropZone} ${
+                        message
+                            ? styles.heroDropZoneMinimised
+                            : styles.heroDropZoneNormal
+                    }`}>
+                    <div className={styles.heroDescription}>
+                        <h2>
+                            Create your avatar for free and use it in your
+                            social media platforms
+                        </h2>
+                        <h3>Start creating you avatar by uploading an image</h3>
+                    </div>
+                    <div>
+                        <DropZone setMessage={setMessage} />
+                    </div>
+                </div>
+                <p>{message}</p>
+            </main>
+            <footer>
+                <p>Copyright &copy; {currentYear} </p>
+            </footer>
+        </>
     );
 }
 

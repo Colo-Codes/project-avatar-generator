@@ -1,0 +1,45 @@
+.dropZone {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ccc;
+    box-shadow: 0px 10px 30px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.dropZoneActive {
+    border-color: #14213d;
+    color: #14213d;
+    background-color: #e5e5e5;
+    transition: var(--transition);
+}
+
+.uploadFilesButton {
+    background-color: #fca311;
+    color: #14213d;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.uploadFilesButton:hover {
+    background-color: #e5e5e5;
+    color: #14213d;
+    border: 1px solid #14213d;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.secondaryText {
+    color: #909090;
+    font-size: 0.8rem;
+}
