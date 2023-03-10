@@ -10,11 +10,68 @@ body {
 
     /* Global style variables */
     --transition: all 0.2s ease-in-out;
+    --max-width: 1024px;
+    --colour-accent: #fca311;
+    --colour-mute: #e5e5e5;
+    --colour-not-that-mute: #909090;
+}
+
+p {
+    margin: 5px;
+}
+
+a {
+    color: var(--colour-not-that-mute);
+    text-decoration: baseline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 0.1rem;
+}
+
+a:hover {
+    color: var(--colour-accent);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.header {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 1rem 0;
+    cursor: default;
+}
+
+.titlePrimary {
+    color: var(--colour-accent);
+    margin-left: 1rem;
+}
+
+.titleSecondary {
+    color: #ae782a;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    cursor: default;
+    transform: scale(1.1);
+    transition: var(--transition);
+    filter: invert(6%) sepia(37%) saturate(4030%) hue-rotate(211deg)
+        brightness(95%) contrast(89%);
 }
 
 .heroDropZone {
     width: 100%;
-    max-width: 1024px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -23,7 +80,7 @@ body {
 }
 
 .heroDropZoneNormal {
-    height: 100vh;
+    height: 70vh;
 }
 
 .heroDropZoneMinimised {
@@ -33,11 +90,33 @@ body {
 
 .heroDescription {
     width: 100%;
-    max-width: 1024px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: flex-start; */
     color: #14213d;
+}
+
+.filesList {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+    color: #14213d;
+}
+
+footer {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
 }

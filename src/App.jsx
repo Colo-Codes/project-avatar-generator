@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import avatarLogo from './assets/avatar-logo.png';
 import styles from './styles/App.module.css';
 import DropZone from './components/DropZone';
 
@@ -9,8 +9,16 @@ function App() {
 
     return (
         <>
-            <header>
-                <h1>Avatar Generator</h1>
+            <header className={styles.header}>
+                <img
+                    src={avatarLogo}
+                    className={styles.logo}
+                    alt='Avatar logo: a gray cat over a yellow round background.'
+                />
+                <h1>
+                    <span className={styles.titlePrimary}>Avatar</span>
+                    <span className={styles.titleSecondary}>Generator</span>
+                </h1>
             </header>
             <main>
                 <div
@@ -30,10 +38,25 @@ function App() {
                         <DropZone setMessage={setMessage} />
                     </div>
                 </div>
-                <p>{message}</p>
+                <div className={styles.filesList}>{message}</div>
             </main>
             <footer>
-                <p>Copyright &copy; {currentYear} </p>
+                <p>
+                    Made with ❤️ by{' '}
+                    <a href='https://www.damiandemasi.com' target='_blank'>
+                        Damian Demasi (Colo.Codes)
+                    </a>{' '}
+                    &copy;
+                    {currentYear}
+                </p>
+                <p>
+                    <a
+                        href='https://www.flaticon.com/free-icons/user'
+                        title='Beautiful cat icon logo'
+                        target='_blank'>
+                        Avatar icon logo created by Freepik - Flaticon
+                    </a>
+                </p>
             </footer>
         </>
     );
