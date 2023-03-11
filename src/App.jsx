@@ -29,10 +29,13 @@ function App() {
                     }`}>
                     <div className={styles.heroDescription}>
                         <h2>
-                            Create your avatar for free and use it in your
-                            social media platforms
+                            Create your avatar <mark>for free</mark> and use it
+                            in your <mark>social media</mark> platforms
                         </h2>
-                        <h3>Start creating you avatar by uploading an image</h3>
+                        <h3>
+                            Start creating you avatar by{' '}
+                            <mark>uploading an image</mark>
+                        </h3>
                     </div>
                     <div>
                         <DropZone setMessage={setMessage} />
