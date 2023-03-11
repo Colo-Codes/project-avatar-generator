@@ -2,6 +2,7 @@ import { useState } from 'react';
 import avatarLogo from './assets/avatar-logo.png';
 import styles from './styles/App.module.css';
 import DropZone from './components/DropZone';
+import ImageEditor from './components/ImageEditor';
 
 function App() {
     const [message, setMessage] = useState(null);
@@ -42,6 +43,7 @@ function App() {
                     </div>
                 </div>
                 <div className={styles.filesList}>{message}</div>
+                <ImageEditor />
             </main>
             <footer>
                 <p>
